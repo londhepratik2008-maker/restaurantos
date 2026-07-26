@@ -155,6 +155,11 @@ export async function createSupplier(data: Omit<Supplier, "$id" | "$createdAt">)
   return doc as unknown as Supplier;
 }
 
+export async function updateSupplier(id: string, data: Partial<Supplier>) {
+  const doc = await databases.updateDocument(db, col.suppliers, id, data);
+  return doc as unknown as Supplier;
+}
+
 export async function deleteSupplier(id: string) {
   await databases.deleteDocument(db, col.suppliers, id);
 }
