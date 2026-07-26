@@ -1,0 +1,20 @@
+export const appwriteConfig = {
+  endpoint: process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT!,
+  projectId: process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID!,
+  databaseId: process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID!,
+  storageId: process.env.NEXT_PUBLIC_APPWRITE_STORAGE_ID!,
+  collections: {
+    restaurants: "restaurants",
+    categories: "categories",
+    menuItems: "menu_items",
+    orders: "orders",
+    orderItems: "order_items",
+    inventoryItems: "inventory_items",
+    suppliers: "suppliers",
+    staff: "staff",
+    shifts: "shifts",
+    transactions: "transactions",
+    customers: "customers",
+    tables: "tables",
+  },
+} as const;
